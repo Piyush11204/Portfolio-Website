@@ -24,12 +24,7 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
-  const stats = [
-    { number: "3+", label: "Years Coding", icon: "💻" },
-    { number: "20+", label: "Projects", icon: "🚀" },
-    { number: "10+", label: "Technologies", icon: "⚡" },
-    { number: "5+", label: "Hackathons", icon: "🏆" }
-  ];
+
 
   const highlights = [
     {
@@ -94,20 +89,7 @@ const About = () => {
             ))}
           </div>
 
-          {/* Stats Section */}
-          <div className="stats-container">
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="stat-item"
-                style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
-              >
-                <span className="stat-icon">{stat.icon}</span>
-                <h4>{stat.number}</h4>
-                <span>{stat.label}</span>
-              </div>
-            ))}
-          </div>
+    
         </div>
       </div>
     </div>
