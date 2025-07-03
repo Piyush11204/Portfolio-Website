@@ -1,0 +1,158 @@
+/* Force visibility for navbar and social icons */
+.header,
+.icons-section,
+.social-icons,
+.navbar-title,
+.navbar-connect {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+  pointer-events: all !important;
+}
+
+/* Force scroll reset */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  position: relative !important;
+  transform: none !important;
+}
+
+/* Kill any GSAP or smooth scroll interference */
+html.has-scroll-smooth, 
+body.has-scroll-smooth,
+html[data-scroll],
+body[data-scroll] {
+  overflow-y: auto !important;
+  position: relative !important;
+  transform: none !important;
+}
+
+.section-container {
+  width: 1300px;
+  max-width: 100%;
+}
+
+.title,
+.para {
+  font-kerning: none;
+  -webkit-text-rendering: optimizeSpeed;
+  text-rendering: optimizeSpeed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Main content container */
+.main-content {
+  width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  position: relative !important;
+  display: block !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+/* Container main fixes */
+.container-main {
+  width: 100% !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  position: relative !important;
+  transform: none !important;
+}
+
+/* Ensure all sections are visible and scrollable */
+.main-content > *,
+.container-main > * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  transform: none !important;
+  will-change: auto !important;
+  overflow-y: visible !important;
+}
+
+/* Kill GSAP smooth scroll containers */
+#smooth-wrapper,
+#smooth-content,
+[data-scroll-container],
+.c-scrollbar,
+.c-scrollbar_thumb {
+  display: none !important;
+  position: relative !important;
+  transform: none !important;
+  overflow: visible !important;
+}
+
+/* Remove any fixed positioning that might lock scroll */
+[data-scroll],
+[data-scroll-container],
+.has-scroll-smooth,
+.has-scroll-scrolling,
+.has-scroll-dragging,
+.has-scroll-init {
+  position: relative !important;
+  transform: none !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* Force remove GSAP transforms */
+* {
+  will-change: auto !important;
+}
+
+*[style*="transform"],
+*[style*="position: fixed"],
+*[style*="overflow: hidden"] {
+  transform: none !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+@media only screen and (max-width: 1600px) {
+  .section-container {
+    width: 1200px;
+    max-width: calc(100% - 160px);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .section-container {
+    width: 900px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .section-container {
+    width: 500px;
+    max-width: var(--cWidth);
+  }
+}
+
+/* Mobile scroll fix */
+@media (max-width: 768px) {
+  html, body {
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+  
+  .main-content {
+    overflow-y: visible !important;
+  }
+}
+
+/* Additional scroll fixes */
+.no-scroll,
+.scroll-locked,
+.overflow-hidden {
+  overflow: auto !important;
+}
