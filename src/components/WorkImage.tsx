@@ -9,35 +9,35 @@ interface Props {
 }
 
 const WorkImage = (props: Props) => {
-  const [isVideo, setIsVideo] = useState(false);
-  const [video, setVideo] = useState("");
-  const handleMouseEnter = async () => {
-    if (props.video) {
-      setIsVideo(true);
-      const response = await fetch(`src/assets/${props.video}`);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      setVideo(blobUrl);
-    }
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    setImageError(true);
   };
+
+  const defaultImage =
+    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop";
 
   return (
     <div className="work-image">
       <a
         className="work-image-in"
         href={props.link}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setIsVideo(false)}
         target="_blank"
-        data-cursor={"disable"}
+        rel="noopener noreferrer"
+        data-cursor="disable"
       >
         {props.link && (
           <div className="work-link">
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+        <img
+          src={imageError ? defaultImage : props.image}
+          alt={props.alt || "Project image"}
+          onError={handleImageError}
+          loading="lazy"
+        />
       </a>
     </div>
   );
