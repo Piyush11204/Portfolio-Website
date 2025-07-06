@@ -129,7 +129,7 @@ const Work = () => {
         
         <div className="work-horizontal-scroll">
           <div className="work-horizontal-container">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <div className="work-card" key={project.id}>
                 
                 <WorkImage 

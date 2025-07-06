@@ -2,7 +2,7 @@ import  { useEffect, useState, useRef } from "react";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
   const aboutRef = useRef(null);
 
   useEffect(() => {
