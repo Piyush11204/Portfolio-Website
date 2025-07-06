@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { 
   Github, 
   Linkedin, 
@@ -7,7 +7,6 @@ import {
   Mail, 
   Download, 
   ExternalLink, 
-  Cpu, 
   Code, 
   Zap,
   ArrowRight,
@@ -17,7 +16,11 @@ import {
   Terminal
 } from "lucide-react";
 
-const Landing = ({ children }) => {
+interface LandingProps {
+  children?: React.ReactNode;
+}
+
+const Landing = ({ children }: LandingProps) => {
   const abilities = [
     "Full-Stack Developer  ",
     "MERN Enthusiast  ",
@@ -31,7 +34,7 @@ const Landing = ({ children }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
     const x = (clientX - left) / width - 0.5;
@@ -281,7 +284,7 @@ const Landing = ({ children }) => {
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4">
               <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all transform hover:scale-105 shadow-lg border border-purple-500 hover:border-purple-400">
-                <Download className="W-5 h-5" />
+                <Download className="w-5 h-5" />
                 <span className="font-mono">DOWNLOAD_CV</span>
               </button>
               <button className="bg-gray-900/50 backdrop-blur-sm hover:bg-gray-800/70 text-gray-200 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all transform hover:scale-105 border border-gray-700 hover:border-gray-600">
