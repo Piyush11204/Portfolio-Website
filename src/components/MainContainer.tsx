@@ -3,7 +3,6 @@ import About from "./About";
 import Career from "./Career";
 import Contact from "./Contact";
 import Landing from "./Landing";
-import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 
 const TechStack = lazy(() => import("./TechStack"));
@@ -27,19 +26,34 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   }, []);
 
   return (
-    <div className="container-main">
-      <main className="main-content">
-        <Landing>{children}</Landing>
-        <About />
-        <WhatIDo />
-        <Career />
-        <Work />
+    <div
+      className="container-main"
+      style={{ position: "relative", overflow: "auto" }}
+    >
+      <main className="main-content" style={{ position: "relative" }}>
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <Landing>{children}</Landing>
+        </section>
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <About />
+        </section>
+       
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <Career />
+        </section>
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <Work />
+        </section>
         {isDesktopView && (
-          <Suspense fallback={<div>Loading Tech Stack...</div>}>
-            <TechStack />
-          </Suspense>
+          <section style={{ position: "relative", zIndex: 1 }}>
+            <Suspense fallback={<div>Loading Tech Stack...</div>}>
+              <TechStack />
+            </Suspense>
+          </section>
         )}
-        <Contact />
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <Contact />
+        </section>
       </main>
     </div>
   );

@@ -192,9 +192,9 @@ const Landing = ({ children }: LandingProps) => {
                 </div>
 
                 {/* Corner Brackets */}
-                <div className="absolute -top-2 -left-2 w-6 h-6 border-l-2 border-t-2 border-purple-500"></div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 border-r-2 border-t-2 border-purple-500"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 border-l-2 border-b-2 border-purple-500"></div>
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-l-2 border-t-2 border-purple-500"></div>
+           
+            
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r-2 border-b-2 border-purple-500"></div>
               </div>
             </div>

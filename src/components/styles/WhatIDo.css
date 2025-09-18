@@ -10,6 +10,9 @@
   max-width: 1920px;
   margin: auto;
   z-index: 9;
+  min-height: 100vh !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
 }
 .what-box {
   width: 50%;
@@ -390,4 +393,17 @@
     font-size: 7rem;
     line-height: 6.8rem;
   }
+}
+.container-main .main-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.whatIDO * {
+  position: relative !important;
+}
+
+.whatIDO .what-box,
+.whatIDO .what-content {
+  position: relative !important;
 }

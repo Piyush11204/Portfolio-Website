@@ -26,7 +26,7 @@ const About = () => {
 
   const highlights = [
     {
-      title: "Deputy Tech Head",
+      title: "Tech Head",
       subtitle: "Hackathon & C3 Committee",
       icon: "⚡",
       description: "Leading technical initiatives and hackathon events"
