@@ -41,7 +41,7 @@ const About = () => {
       title: "VCET Student",
       subtitle: "IT Engineering",
       icon: "🎓",
-      description: "Third-year student specializing in software development"
+      description: "Final Year student specializing in software development"
     }
   ];
 
@@ -85,7 +85,7 @@ const About = () => {
             <div className={`space-y-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <p className="text-xl leading-relaxed text-gray-300">
                 I'm <span className="text-white font-semibold">Piyush Krishnadutta Yadav</span>, 
-                a passionate third-year IT student at VCET, serving as Deputy Tech Head for Hackathons & C3.
+                a passionate Final Year IT student at VCET, serving as Deputy Tech Head for Hackathons & C3.
               </p>
               
               <p className="text-lg leading-relaxed text-gray-400">

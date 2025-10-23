@@ -127,25 +127,7 @@ const GitHubStats = () => {
           </div>
         </div>
 
-        {/* Language & Repository Stats */}
-        <div className={`grid md:grid-cols-2 gap-8 mb-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <div className="overflow-hidden rounded-lg">
-            <img 
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=Piyush11204&theme=tokyonight&hide_border=true&layout=compact" 
-              alt="Top Languages" 
-              className="w-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="overflow-hidden rounded-lg">
-            <img 
-              src="https://github-readme-stats.vercel.app/api?username=Piyush11204&theme=tokyonight&hide_border=true&show_icons=true&count_private=true" 
-              alt="GitHub Stats" 
-              className="w-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
+      
 
         {/* GitHub Trophies */}
         <div className={`mb-16 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -160,36 +142,9 @@ const GitHubStats = () => {
           </div>
         </div>
 
-        {/* Contribution Streak */}
-        <div className={`mb-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <h3 className="text-2xl font-bold text-center mb-8 text-white">Contribution Streak</h3>
-          <div className="overflow-hidden rounded-lg max-w-2xl mx-auto">
-            <img 
-              src="https://github-readme-streak-stats.herokuapp.com/?user=Piyush11204&theme=tokyonight&hide_border=true" 
-              alt="GitHub Streak" 
-              className="w-full"
-              loading="lazy"
-            />
-          </div>
-        </div>
+      
 
-        {/* Fun Section */}
-        <div className={`text-center transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center space-x-2 text-gray-500 text-sm mb-8">
-            <span>⚡ I debug code faster than I debug my life!</span>
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-          </div>
-          
-          {/* Visitor Counter */}
-          <div>
-            <img 
-              src="https://visitcount.itsvg.in/api?id=Piyush11204&icon=6&color=112" 
-              alt="Visitor Count" 
-              className="mx-auto"
-              loading="lazy"
-            />
-          </div>
-        </div>
+     
       </div>
     </div>
   );

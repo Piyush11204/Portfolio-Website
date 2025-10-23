@@ -256,7 +256,7 @@ const Landing = ({ children }: LandingProps) => {
             {/* Description */}
             <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-lg p-6 shadow-xl">
               <p className="text-lg text-gray-300 leading-relaxed font-light">
-                <span className="text-purple-400 font-mono">[PROFILE_DATA]</span> Third-year IT student at 
+                <span className="text-purple-400 font-mono">[PROFILE_DATA]</span> Final Year IT student at 
                 <span className="text-white font-semibold"> Vidyavardhini's College Of Engineering & Technology (VCET)</span>, 
                 specializing in Information Technology with CyberSecurity Honors. Core competencies include 
                 <span className="text-white font-semibold"> MERN_STACK</span>, 
