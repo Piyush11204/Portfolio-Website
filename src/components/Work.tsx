@@ -5,113 +5,113 @@ const Work = () => {
   const projects = [
     {
       id: 1,
-      title: "Lsoys - Cricket Card Game",
-      category: "MERN Stack",
-      description: "Interactive cricket card game with real-time gameplay and user engagement features.",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      gitUrl: "https://github.com/lsoys/criket-card-game",
-      websiteUrl: "https://criket-card-game-1.onrender.com/",
-      image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&h=400&fit=crop",
-      tags: ["Gaming", "MERN"]
+      title: "Learning Sphere",
+      category: "AI-Powered LMS",
+      description: "Full-stack MERN-based Learning Management System with JWT + Google reCAPTCHA authentication, AI-driven adaptive exams, and gamification features.",
+      technologies: ["React", "Node.js", "MongoDB", "AI/ML", "JWT", "reCAPTCHA"],
+      gitUrl: "https://learningsphere-1fgj.onrender.com/",
+      websiteUrl: "https://learningsphere-1fgj.onrender.com/",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
+      tags: ["AI/ML", "LMS", "MERN"]
     },
     {
       id: 2,
-      title: "StackPop Jobs",
-      category: "MERN Stack",
-      description: "Platform for internships, jobs, and events with advanced filtering and application tracking.",
-      technologies: ["React", "Node.js", "MongoDB", "JWT"],
-      gitUrl: "https://github.com/lsoys/StackPop-Jobs",
-      websiteUrl: "https://stackpop.onrender.com/login",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-      tags: ["Jobs", "Platform"]
+      title: "BreathEasy - Smoking Cessation App",
+      category: "AI/ML Flutter App",
+      description: "AI-driven platform analyzing smoking habits with personalized cessation reports, interactive games, and behavioral analysis.",
+      technologies: ["Flutter", "AI/ML", "NLP", "Firebase", "Dart"],
+      gitUrl: "https://github.com/Piyush11204/BreathEasy",
+      websiteUrl: "https://github.com/Piyush11204/BreathEasy",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
+      tags: ["AI/ML", "Health", "Flutter"]
     },
     {
       id: 3,
-      title: "Plants Ecommerce",
-      category: "MERN Stack",
-      description: "A beautiful nursery website for plant enthusiasts with shopping cart and payment integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      gitUrl: "https://github.com/Piyush11204/PlantsEcom",
-      websiteUrl: "https://plantsecom.onrender.com/",
-      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop",
-      tags: ["Ecommerce", "Plants"]
+      title: "EasyYoga - AI Pose Correction",
+      category: "AI/ML Web App",
+      description: "AI-powered yoga pose analysis with real-time corrections, video tutorials, and personalized diet plans using computer vision.",
+      technologies: ["React", "AI/ML", "Computer Vision", "OAuth", "Node.js"],
+      gitUrl: "https://easy-yoga.vercel.app/",
+      websiteUrl: "https://easy-yoga.vercel.app/",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop",
+      tags: ["AI/ML", "Yoga", "Computer Vision"]
     },
     {
       id: 4,
-      title: "Report Generator AI",
-      category: "Flask",
-      description: "AI-powered report generation tool for major projects with customizable templates.",
-      technologies: ["Flask", "Python", "AI/ML", "PostgreSQL"],
-      gitUrl: "https://github.com/lsoys/report-generator-ai",
-      websiteUrl: "https://reportgen.tech/",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      tags: ["AI", "Reports"]
+      title: "StackPop Job Portal",
+      category: "MERN Stack",
+      description: "Live job portal platform with authentication, resume uploads, admin dashboard, and advanced filtering for internships and jobs.",
+      technologies: ["React", "Node.js", "MongoDB", "JWT", "Multer"],
+      gitUrl: "https://github.com/lsoys/StackPop-Jobs",
+      websiteUrl: "https://stackpop.tech/",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      tags: ["Jobs", "MERN", "Platform"]
     },
     {
       id: 5,
-      title: "RentItems.in",
-      category: "MERN Stack",
-      description: "My first project at Lsoys - a comprehensive rental platform for various items.",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      gitUrl: "https://github.com/lsoys/rentitems.in",
-      websiteUrl: "https://rentitems.in",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tags: ["Rental", "Platform"]
+      title: "MigooAI Frontend",
+      category: "React Frontend",
+      description: "Frontend development for Israeli client's AI-driven content generation platform with dynamic user interfaces and smooth UX.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "AI APIs"],
+      gitUrl: "https://github.com/lsoys/migooai",
+      websiteUrl: "https://migooai.com/dashboard",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+      tags: ["AI", "Frontend", "React"]
     },
     {
       id: 6,
-      title: "Flat Finder",
-      category: "MERN Stack",
-      description: "Real estate platform for finding and renting flats with advanced search filters.",
-      technologies: ["React", "Node.js", "MongoDB", "Maps API"],
-      gitUrl: "https://github.com/lsoys/flat-finder",
-      websiteUrl: "https://rentify-zeta-liard.vercel.app/",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-      tags: ["Real Estate", "Rental"]
+      title: "Cricket Card Game",
+      category: "MERN Stack Game",
+      description: "Real-time multiplayer cricket card game with dynamic scoring, leaderboard logic, and engaging gameplay mechanics.",
+      technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
+      gitUrl: "https://github.com/lsoys/criket-card-game",
+      websiteUrl: "https://criket-card-game-1.onrender.com/",
+      image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&h=400&fit=crop",
+      tags: ["Gaming", "MERN", "Real-time"]
     },
     {
       id: 7,
-      title: "Domain Fit",
-      category: "Next.js",
-      description: "My first site with 170+ users - domain name suggestion and availability checker.",
-      technologies: ["Next.js", "React", "Vercel", "API"],
-      gitUrl: "https://github.com/lsoys/domain-fit",
-      websiteUrl: "http://domain-fit.onrender.com",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-      tags: ["Domain", "Tool"]
+      title: "Velvikx - Furniture E-commerce",
+      category: "MERN Stack",
+      description: "Full-stack eCommerce platform with multi-category products, secure payments (Razorpay/UPI/COD), enhanced user engagement by 45%.",
+      technologies: ["React", "Node.js", "MongoDB", "Razorpay", "Express"],
+      gitUrl: "https://github.com/lsoys/velvikx",
+      websiteUrl: "https://velvikx.com/",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop",
+      tags: ["E-commerce", "MERN", "Payments"]
     },
     {
       id: 8,
-      title: "Music Link Shortener",
-      category: "EJS",
-      description: "Automation project for artists to manage and share their music links efficiently.",
-      technologies: ["EJS", "Node.js", "Express", "MongoDB"],
-      gitUrl: "http://github.com/lsoys/music-link-shortner/",
-      websiteUrl: "https://musicflow.tech/",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-      tags: ["Music", "Automation"]
+      title: "Fonto - Typography Platform",
+      category: "MERN Stack",
+      description: "Typography and font management platform with modern UI and comprehensive font library for designers and developers.",
+      technologies: ["React", "Node.js", "MongoDB", "CSS3", "Express"],
+      gitUrl: "https://github.com/lsoys/fonto",
+      websiteUrl: "https://fonto.in/",
+      image: "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=600&h=400&fit=crop",
+      tags: ["Typography", "Design", "MERN"]
     },
     {
       id: 9,
-      title: "TechConnect",
-      category: "Next.js",
-      description: "My freelancer website showcasing technical skills and project portfolio.",
-      technologies: ["Next.js", "React", "Tailwind", "Vercel"],
-      gitUrl: "https://github.com/Piyush11204/TechConnect",
-      websiteUrl: "https://tech-connect-gray.vercel.app/",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop",
-      tags: ["Portfolio", "Freelance"]
+      title: "Plants E-commerce",
+      category: "MERN Stack",
+      description: "Beautiful nursery website for plant enthusiasts with shopping cart, payment integration, and plant care guides.",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Express"],
+      gitUrl: "https://github.com/Piyush11204/PlantsEcom",
+      websiteUrl: "https://plantsecom.onrender.com/",
+      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop",
+      tags: ["E-commerce", "Plants", "MERN"]
     },
     {
       id: 10,
-      title: "Matrimonial Platform",
-      category: "MERN Stack",
-      description: "Complete matrimonial website with profile matching and communication features.",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      gitUrl: "https://github.com/Piyush11204/Matrimonial",
-      websiteUrl: "https://matrimonial-1.onrender.com/",
-      image: "https://images.unsplash.com/photo-1529634597243-61d4905da2e2?w=600&h=400&fit=crop",
-      tags: ["Matrimonial", "Social"]
+      title: "TechConnect Portfolio",
+      category: "Next.js",
+      description: "Personal freelancer website showcasing technical skills, project portfolio, and professional services.",
+      technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+      gitUrl: "https://github.com/Piyush11204/TechConnect",
+      websiteUrl: "https://tech-connect-gray.vercel.app/",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop",
+      tags: ["Portfolio", "Next.js", "Freelance"]
     }
   ];
 
@@ -120,10 +120,10 @@ const Work = () => {
       <div className="work-container">
         <div className="work-header">
           <h2 className="work-title">
-            My <span className="work-title-accent">Work</span>
+            My <span className="work-title-accent">Projects</span>
           </h2>
           <p className="work-subtitle">
-            Showcasing my journey through various technologies and domains
+            20+ Full-Stack Projects | MERN Stack | AI/ML | Next.js | Flutter
           </p>
         </div>
         

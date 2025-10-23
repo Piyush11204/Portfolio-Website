@@ -23,9 +23,11 @@ interface LandingProps {
 const Landing = ({ children }: LandingProps) => {
   const abilities = [
     "Full-Stack Developer  ",
+    "AI/ML Enthusiast  ",
     "MERN Enthusiast  ",
     "UI/UX Designer  ",
     "System Architect  ",
+    
     "Code Craftsman  "
   ];
 
@@ -255,11 +257,12 @@ const Landing = ({ children }: LandingProps) => {
             <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-lg p-6 shadow-xl">
               <p className="text-lg text-gray-300 leading-relaxed font-light">
                 <span className="text-purple-400 font-mono">[PROFILE_DATA]</span> Third-year IT student at 
-                <span className="text-white font-semibold"> VCET</span>, 
-                specializing in system architecture and full-stack development. Core competencies include 
-                <span className="text-white font-semibold"> MERN_STACK</span> and 
+                <span className="text-white font-semibold"> Vidyavardhini's College Of Engineering & Technology (VCET)</span>, 
+                specializing in Information Technology with CyberSecurity Honors. Core competencies include 
+                <span className="text-white font-semibold"> MERN_STACK</span>, 
+                <span className="text-white font-semibold"> AI/ML</span>, and 
                 <span className="text-white font-semibold"> NEXT.JS</span> frameworks. 
-                Mission: Transform complex problems into elegant digital solutions.
+                Mission: Transform complex problems into elegant digital solutions through innovative technology.
               </p>
             </div>
 
@@ -277,16 +280,20 @@ const Landing = ({ children }: LandingProps) => {
                   <Calendar className="w-4 h-4" />
                   <span className="text-sm font-mono">RUNTIME</span>
                 </div>
-                <p className="text-white font-semibold font-mono">3Y_8M_15D</p>
+                <p className="text-white font-semibold font-mono">10M_21D</p>
               </div>
             </div>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4">
-              <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all transform hover:scale-105 shadow-lg border border-purple-500 hover:border-purple-400">
+              <a 
+                href="/Temp-Resume-Oct-10.pdf" 
+                download="Piyush_Yadav_Resume.pdf"
+                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all transform hover:scale-105 shadow-lg border border-purple-500 hover:border-purple-400"
+              >
                 <Download className="w-5 h-5" />
                 <span className="font-mono">DOWNLOAD_CV</span>
-              </button>
+              </a>
               <button className="bg-gray-900/50 backdrop-blur-sm hover:bg-gray-800/70 text-gray-200 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all transform hover:scale-105 border border-gray-700 hover:border-gray-600">
                 <span className="font-mono">VIEW_PROJECTS</span>
                 <ArrowRight className="w-5 h-5" />
