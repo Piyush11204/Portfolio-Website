@@ -1,6 +1,11 @@
 import "./App.css";
 import { useEffect } from "react";
 import MainContainer from "./components/MainContainer";
+import SEO from "./components/SEO";
+import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import ScrollManager from "./components/ScrollManager";
+import ErrorBoundary from "./components/ErrorBoundary";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
 
 const App = () => {
   useEffect(() => {
@@ -55,7 +60,15 @@ const App = () => {
     };
   }, []);
 
-  return <MainContainer />;
+  return (
+    <ErrorBoundary>
+      <SEO />
+      <PerformanceOptimizer />
+      <ScrollManager />
+      <AccessibilityEnhancer />
+      <MainContainer />
+    </ErrorBoundary>
+  );
 };
 
 export default App;

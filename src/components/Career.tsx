@@ -1,18 +1,44 @@
+import { useEffect, useState, useRef } from "react";
 import "./styles/Career.css";
 
 const Career = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const careerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (careerRef.current) {
+      observer.observe(careerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="career-section section-container">
+    <div 
+      ref={careerRef}
+      className="career-section section-container"
+    >
       <div className="career-container">
-        <h2>
+        <h2 className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           My career <span>&</span>
           <br /> experience
         </h2>
         <div className="career-info">
           <div className="career-timeline">
-            <div className="career-dot"></div>
+            <div className={`career-dot transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}></div>
           </div>
-          <div className="career-info-box">
+          <div className={`career-info-box transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>BE Information Technology (Honors in CyberSecurity)</h4>
@@ -26,7 +52,7 @@ const Career = () => {
               Serving as Technical Head for Hackathon Committee and Core Coding Committee.
             </p>
           </div>
-          <div className="career-info-box">
+          <div className={`career-info-box transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>MERN Stack Developer Intern</h4>
@@ -40,7 +66,7 @@ const Career = () => {
               developer for MigooAI. Enhanced user engagement by 45% through modern responsive UI implementations.
             </p>
           </div>
-          <div className="career-info-box">
+          <div className={`career-info-box transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Technical Leadership & Open Source</h4>
