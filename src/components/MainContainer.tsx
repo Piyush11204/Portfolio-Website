@@ -4,6 +4,7 @@ import Career from "./Career";
 import Contact from "./Contact";
 import Landing from "./Landing";
 import Work from "./Work";
+import GitHubStats from "./GitHubStats";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -51,6 +52,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             </Suspense>
           </section>
         )}
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <GitHubStats />
+        </section>
         <section style={{ position: "relative", zIndex: 1 }}>
           <Contact />
         </section>
