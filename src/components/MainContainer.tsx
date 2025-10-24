@@ -5,6 +5,8 @@ import Contact from "./Contact";
 import Landing from "./Landing";
 import Work from "./Work";
 import GitHubStats from "./GitHubStats";
+import Certifications from "./Certifications";
+import GitHubSponsors from "./GitHubSponsors";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -45,6 +47,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <section style={{ position: "relative", zIndex: 1 }}>
           <Work />
         </section>
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <Certifications />
+        </section>
         {isDesktopView && (
           <section style={{ position: "relative", zIndex: 1 }}>
             <Suspense fallback={<div>Loading Tech Stack...</div>}>
@@ -54,6 +59,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         )}
         <section style={{ position: "relative", zIndex: 1 }}>
           <GitHubStats />
+        </section>
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <GitHubSponsors />
         </section>
         <section style={{ position: "relative", zIndex: 1 }}>
           <Contact />

@@ -73,7 +73,7 @@
 
 .work-card {
   width: 400px;
-  height: 600px;
+  height: 700px;
   background: #000000;
   position: relative;
   display: flex;
@@ -295,7 +295,7 @@
   
   .work-card {
     width: 320px;
-    height: 550px;
+    height: 650px;
   }
   
   .work-image {
@@ -310,7 +310,7 @@
 @media screen and (max-width: 480px) {
   .work-card {
     width: 280px;
-    height: 500px;
+    height: 600px;
   }
   
   .work-project-title {
