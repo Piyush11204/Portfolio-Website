@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Award, ExternalLink, Calendar, Building } from 'lucide-react';
+import { ExternalLink, Calendar, Building } from 'lucide-react';
 import "./styles/Work.css";
 
 interface Certification {
@@ -18,6 +18,24 @@ interface Certification {
 const Certifications = () => {
   const [visibleCerts, setVisibleCerts] = useState<number[]>([]);
   const certRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Add custom styles for image hover effect
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .work-image-link:hover img {
+        transform: scale(1.05);
+      }
+      .work-image-link:hover .work-image-overlay {
+        opacity: 1 !important;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
 
   const certifications: Certification[] = [
     {
@@ -171,20 +189,56 @@ const Certifications = () => {
                 }}
               >
                 <div className="work-image-container">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.title}
-                    className="work-image"
-                    style={{
-                      width: '100%',
-                      height: '200px',
-                      objectFit: 'cover',
-                      borderRadius: '8px'
-                    }}
-                  />
-                  <div className="work-image-overlay">
-                    <Award style={{ width: '2rem', height: '2rem', color: 'white' }} />
-                  </div>
+                  {cert.certificateUrl ? (
+                    <a 
+                      href={cert.certificateUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="work-image-link"
+                      style={{ display: 'block', position: 'relative' }}
+                    >
+                      <img 
+                        src={cert.image} 
+                        alt={cert.title}
+                        className="work-image"
+                        style={{
+                          width: '100%',
+                          height: '200px',
+                          objectFit: 'cover',
+                          borderRadius: '8px',
+                          transition: 'transform 0.3s ease'
+                        }}
+                      />
+                      <div className="work-image-overlay" style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        opacity: 0,
+                        transition: 'opacity 0.3s ease',
+                        background: 'rgba(0, 0, 0, 0.7)',
+                        borderRadius: '50%',
+                        padding: '1rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}>
+                        <ExternalLink style={{ width: '1.5rem', height: '1.5rem', color: 'white' }} />
+                      </div>
+                    </a>
+                  ) : (
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="work-image"
+                      style={{
+                        width: '100%',
+                        height: '200px',
+                        objectFit: 'cover',
+                        borderRadius: '8px'
+                      }}
+                    />
+                  )}
                 </div>
                 
                 <div className="work-content">
