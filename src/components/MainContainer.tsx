@@ -1,4 +1,4 @@
-import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
+import { lazy, PropsWithChildren, Suspense } from "react";
 import About from "./About";
 import Career from "./Career";
 import Contact from "./Contact";
@@ -11,22 +11,6 @@ import GitHubSponsors from "./GitHubSponsors";
 const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
-  const [isDesktopView, setIsDesktopView] = useState<boolean>(
-    window.innerWidth > 1024
-  );
-
-  useEffect(() => {
-    const resizeHandler = () => {
-      setIsDesktopView(window.innerWidth > 1024);
-    };
-
-    resizeHandler();
-    window.addEventListener("resize", resizeHandler);
-
-    return () => {
-      window.removeEventListener("resize", resizeHandler);
-    };
-  }, []);
 
   return (
     <div
@@ -50,13 +34,11 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <section style={{ position: "relative", zIndex: 1 }}>
           <Certifications />
         </section>
-        {isDesktopView && (
-          <section style={{ position: "relative", zIndex: 1 }}>
-            <Suspense fallback={<div>Loading Tech Stack...</div>}>
-              <TechStack />
-            </Suspense>
-          </section>
-        )}
+        <section style={{ position: "relative", zIndex: 1 }}>
+          <Suspense fallback={<div>Loading Tech Stack...</div>}>
+            <TechStack />
+          </Suspense>
+        </section>
         <section style={{ position: "relative", zIndex: 1 }}>
           <GitHubStats />
         </section>
